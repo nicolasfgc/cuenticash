@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuentiCash</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>CuentiCash</h1>
+
+<!-- PERSONAS -->
+<div class="card">
+  <h2>Personas</h2>
+  <input id="personaInput" placeholder="Nombre">
+  <button onclick="agregarPersona()">Agregar persona</button>
+  <ul id="listaPersonas"></ul>
+</div>
+
+<!-- GASTO -->
+<div class="card">
+  <h2>Gasto</h2>
+
+  <input id="gastoConcepto" placeholder="Concepto">
+  <input id="gastoMonto" type="number" placeholder="Monto (COP)">
+
+  <p>¿Quiénes participaron?</p>
+  <div id="gastoParticipantes"></div>
+
+  <p>¿Quién pagó?</p>
+  <select id="gastoPago"></select>
+
+  <button onclick="agregarGasto()">Agregar gasto</button>
+</div>
+
+<!-- ABONO -->
+<div class="card">
+  <h2>Abono</h2>
+
+  <p>Quién hace el abono</p>
+  <select id="abonoDe"></select>
+
+  <p>Quién recibe el abono</p>
+  <select id="abonoA"></select>
+
+  <input id="abonoMonto" type="number" placeholder="Monto (COP)">
+
+  <button onclick="agregarAbono()">Agregar abono</button>
+</div>
+
+<!-- HISTORIAL -->
+<div class="card">
+  <h2>Historial de transacciones</h2>
+  <button class="danger" onclick="eliminarTodo()">Eliminar todo</button>
+  <div id="historial"></div>
+</div>
+
+<!-- RESULTADO -->
+<div class="card">
+  <h2>Resultado</h2>
+  <div id="resultado"></div>
+  <div id="pagos"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
